@@ -34,7 +34,7 @@ CodeFormer (얼굴 crop + 얼굴 복원 + 병합)
 Real-ESRGAN (전체 프레임 최종 HR)
    ↓
 InsightFace 기반 타겟 얼굴 매칭 + Bounding Box
-
+```
 ---
 
 ## 3. 폴더 구조 설명
@@ -56,7 +56,7 @@ Looky/
 ├─ environment.yml             # Anaconda 실행 환경
 ├─ .gitignore
 └─ README.md
-
+```
 ---
 
 ## 4. 실행 환경 (Environment)
@@ -66,6 +66,28 @@ Looky/
 ```bat
 conda env create -f environment.yml
 conda activate keep_py310
-
+```
 ⚠️ GPU 환경 권장
 CUDA 사용 가능 시 실행 속도가 크게 향상된다.
+
+---
+
+## 5. 데이터셋 및 실험 데이터 설명
+
+### 원본 데이터
+- 공개 영상 데이터셋(URL) 사용  
+  👉 https://drive.google.com/file/d/1OnaRN2qYhZ2n4rSaNZQJzQPd1Cl2fluk/view
+- 원본 영상 길이: **약 35분**
+
+### 본 프로젝트에서의 사용 방식
+- 원본 장시간 영상을 그대로 사용하면  
+  프레임 분할 시 **이미지 수가 과도하게 증가**하여  
+  연산 자원 및 실험 재현성에 부담이 큼
+- 따라서 실험 목적에 맞게  
+  **약 3초 분량의 구간만 선택**하여 사용
+- 해당 구간을 프레임 이미지로 분할한 뒤  
+  👉 **총 90장의 프레임 이미지**만을 사용해 실험 수행
+
+⚠️ 저작권 및 용량 문제로  
+원본 영상 및 프레임 데이터는 GitHub에 업로드하지 않음
+
