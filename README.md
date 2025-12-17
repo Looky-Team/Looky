@@ -198,3 +198,23 @@ python detection\multitarget.py
 Super-Resolution 적용 후 얼굴 특징이 개선되어 단일 reference 조건에서도 기본적인 타겟 식별이 가능함을 확인하였다.
 
 ---
+
+### Experiment 2. Multiple Reference Images per Target (Single Target)
+
+본 실험에서는 **동일 인물의 여러 각도에서 촬영된 reference 이미지 2장**을 사용하여  
+단일 reference 이미지 사용 대비 **타겟 얼굴 탐지 성능 향상 여부**를 확인하였다.
+
+- **Reference images (2 per target)**  
+
+<img src="assets/photos/train_singlemulti_im1.png" width="120"/>  <img src="assets/photos/train_singlemulti_im2.png" width="120"/>
+
+| **Input video (Low-Resolution)** | **Output video (High-Resolution + Detection)** |
+|:--:|:--:|
+| ![](assets/videos/train_singlemulti_lr.gif) | ![](assets/videos/train_singlemulti_hr.gif) |
+
+**Description**  
+단일 reference 이미지 사용 시에는 얼굴 각도, 조명 변화에 따라 타겟 인식 신뢰도가 불안정한 경우가 발생하였다.  
+반면, 동일 인물의 서로 다른 각도에서 촬영된 reference 이미지 2장을 사용하여 평균 embedding을 생성한 결과,  
+얼굴 방향 변화에도 보다 **안정적인 타겟 얼굴 탐지 성능**을 확인할 수 있었다.
+
+---
