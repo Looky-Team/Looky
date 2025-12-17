@@ -42,20 +42,29 @@ InsightFace 기반 타겟 얼굴 매칭 + Bounding Box
 ```bash
 Looky/
 │
-├─ scripts/                    # 각 단계별 실행/설명 문서
-│  ├─ 01_pipeline_overview.md
-│  ├─ 02_swinir_x4.md
-│  ├─ 03_codeformer_facesr.md
-│  ├─ 04_realesrgan_final.md
-│  └─ 05_detection_tracking.md
+├─ scripts/                    # 파이프라인 단계별 실행 및 설명 문서
+│  ├─ 01_pipeline_overview.md  # 전체 파이프라인 개요
+│  ├─ 02_swinir_x4.md          # SwinIR x4 Super-Resolution 단계
+│  ├─ 03_codeformer_facesr.md  # CodeFormer 기반 얼굴 복원 단계
+│  ├─ 04_realesrgan_final.md   # Real-ESRGAN 최종 보정 단계
+│  └─ 05_detection_tracking.md # 얼굴 검출 및 타겟 추적 단계
+│
+├─ external/                   # 외부 모델 공식 실행 스크립트
+│  ├─ main_test_swinir_tile.py # SwinIR 타일 기반 x4 추론 스크립트
+│  ├─ inference_codeformer.py  # CodeFormer 얼굴 복원 추론 스크립트
+│  └─ inference_realesrgan.py  # Real-ESRGAN 최종 업스케일링 스크립트
 │
 ├─ detection/                  # 얼굴 인식 및 타겟 매칭 코드
 │  ├─ onetarget_multi.py       # 단일 타겟 (reference 여러 장 평균 embedding)
 │  └─ multitarget.py           # 다중 타겟 얼굴 인식
 │
-├─ environment.yml             # Anaconda 실행 환경
-├─ .gitignore
-└─ README.md
+├─ assets/                     # 결과 시각화 및 예시 파일
+│  └─ videos/            
+│
+├─ environment.yml             # Anaconda 실행 환경 설정 파일
+├─ .gitignore                  
+└─ README.md                   
+
 ```
 ---
 
