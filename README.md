@@ -244,3 +244,42 @@ Super-Resolution 적용 후 얼굴 특징이 개선되어 단일 reference 조�
 **Description**  
 각 인물당 reference 이미지가 1장으로 제한된 조건에서도 Super-Resolution 기반 파이프라인을 통해  
 다수의 타겟 얼굴을 동시에 탐지할 수 있음을 확인하였다.  
+
+---
+
+## 💜 Team Members
+
+<table align="center">
+  <tr>
+    <th>Role</th>
+    <th>Member</th>
+    <th>Contribution</th>
+  </tr>
+  <tr>
+    <td align="center">
+      Team Leader<br/>
+      Video Restoration
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/68e7765e-92f0-4bd9-9d69-64c936b3e6e5" width="110"/><br/>
+      <b>황채원</b><br/>
+      <a href="https://github.com/ChaewonHwang-01">ChaewonHwang-01</a>
+    </td>
+    <td>
+      프로젝트 총괄 및 영상 초해상도 파이프라인 설계·구현
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Object & Face Detection
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/stellarrbs" width="110"/><br/>
+      <b>김채원</b><br/>
+      <a href="https://github.com/stellarrbs">stellarrbs</a>
+    </td>
+    <td>
+      얼굴·객체 검출 기반 타겟 인식 및 추적 구현
+    </td>
+  </tr>
+</table>
