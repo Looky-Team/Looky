@@ -101,7 +101,7 @@ CUDA 사용 가능 시 실행 속도가 크게 향상된다.
 > 📄 참고 문서: scripts/02_swinir_x4.md
 
 ```bat
-python main_test_swinir.py ...
+python main_test_swinir_tile.py ...
 ```
 
 ### STEP 2. CodeFormer (얼굴 복원 + 자동 crop & merge)
@@ -114,9 +114,8 @@ python main_test_swinir.py ...
 python inference_codeformer.py ^
  -i <SwinIR 결과 폴더> ^
  -o <CodeFormer 출력 폴더> ^
- -w 0.95 ^
- --bg_upsampler none ^
- --face_upsample
+ -w 0.98 ^
+ --bg_upsampler none
 ```
 
 ### STEP 3. Real-ESRGAN (최종 HR 프레임 생성)
