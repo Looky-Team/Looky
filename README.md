@@ -81,8 +81,6 @@ Looky/
 
 ---
 
----
-
 ## 5. 실행 환경 (Environment)
 
 ### 5.1 Anaconda 환경 생성
@@ -181,3 +179,22 @@ python detection\multitarget.py
 
 - **cosine similarity ≥ threshold** → 🟩 초록 박스 (**FOUND**)
 - **cosine similarity < threshold** → 🟥 빨강 박스 (**Unknown**)
+
+---
+
+## 7. Experimental Results
+
+### Experiment 1. Single Reference Image per Target
+
+- **Reference image (1 per target)**  
+  `assets/photos/train_unit.jpg`
+
+| **Input video (Low-Resolution)** | **Output video (High-Resolution + Detection)** |
+|:--:|:--:|
+| ![](assets/videos/train_unit_lr.gif) | ![](assets/videos/train_unit_hr.gif) |
+
+**Description**  
+각 타겟당 reference 이미지 1장만 사용하여 저해상도 영상에서 타겟 얼굴 탐지를 수행하였다.  
+Super-Resolution 적용 후 얼굴 특징이 개선되어 단일 reference 조건에서도 기본적인 타겟 식별이 가능함을 확인하였다.
+
+---
