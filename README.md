@@ -66,11 +66,26 @@ Looky/
 └─ README.md                   
 
 ```
+
 ---
 
-## 4. 실행 환경 (Environment)
+## 4. Pretrained Models
 
-### 4.1 Anaconda 환경 생성
+- **SwinIR x4 (GAN)**  
+  Download: https://huggingface.co/mikestealth/SwinIR/blob/main/003_realSR_BSRGAN_DFO_s64w8_SwinIR-M_x4_GAN.pth
+
+- **Real-ESRGAN x4plus**  
+  Download: https://huggingface.co/lllyasviel/Annotators/blob/main/RealESRGAN_x4plus.pth
+
+> ⚠️ 사전 학습된 모델은 모두 공식 출처에서 제공된 것이며, 본 저장소에서는 재배포하지 않습니다.
+
+---
+
+---
+
+## 5. 실행 환경 (Environment)
+
+### 5.1 Anaconda 환경 생성
 
 ```bat
 conda env create -f environment.yml
@@ -81,7 +96,7 @@ CUDA 사용 가능 시 실행 속도가 크게 향상된다.
 
 ---
 
-## 5. 데이터셋 및 실험 데이터 설명
+## 6. 데이터셋 및 실험 데이터 설명
 
 ### 원본 데이터
 - 공개 영상 데이터셋(URL) 사용  
@@ -102,7 +117,7 @@ CUDA 사용 가능 시 실행 속도가 크게 향상된다.
 
 ---
 
-## 6. 단계별 실행 방법 (핵심)
+## 7. 단계별 실행 방법 (핵심)
 
 ### STEP 1. SwinIR x4 (1차 Super-Resolution)
 > 저해상도 프레임을 입력으로 받아 1차 HR 프레임을 생성한다.
