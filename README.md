@@ -274,7 +274,7 @@ Super-Resolution 적용 후 얼굴 특징이 개선되어 단일 reference 조�
       Object & Face Detection
     </td>
     <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/stellarrbs" width="110"/><br/>
+      <img src="https://github.com/user-attachments/assets/73677e04-593d-4351-a1fa-7daf2b537a40" width="110"/><br/>
       <b>김채원</b><br/>
       <a href="https://github.com/stellarrbs">stellarrbs</a>
     </td>
