@@ -4,7 +4,7 @@
 
 ## 🔍 Qualitative Comparison
 
-| Before (Low-Resolution) | After (Super-Resolution) |
+| Before (Low-Resolution) | After (High-Resolution) |
 |:--:|:--:|
 | ![](assets/videos/test_lr.gif) | ![](assets/videos/test_hr.gif) |
 
