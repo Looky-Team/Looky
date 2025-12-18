@@ -5,7 +5,7 @@
 - MP4 영상으로 재구성
 
 ### Script
-`external/imgtovidep.py`
+`external/imgtovideo.py`
 
 ### Input
 - ./video_realesrgan_final/*.png
