@@ -47,12 +47,14 @@ Looky/
 │  ├─ 02_swinir_x4.md          # SwinIR x4 Super-Resolution 단계
 │  ├─ 03_codeformer_facesr.md  # CodeFormer 기반 얼굴 복원 단계
 │  ├─ 04_realesrgan_final.md   # Real-ESRGAN 최종 보정 단계
+│  ├─ 04_5_img_to_video.md     # (이미지 → 영상) 단계
 │  └─ 05_detection_tracking.md # 얼굴 검출 및 타겟 추적 단계
 │
 ├─ external/                   # 외부 모델 공식 실행 스크립트
-│  ├─ main_test_swinir_tile.py # SwinIR 타일 기반 x4 추론 스크립트
+│  ├─ imgtovidep.py 
 │  ├─ inference_codeformer.py  # CodeFormer 얼굴 복원 추론 스크립트
-│  └─ inference_realesrgan.py  # Real-ESRGAN 최종 업스케일링 스크립트
+│  ├─ inference_realesrgan.py  # Real-ESRGAN 최종 업스케일링 스크립트
+│  └─ main_test_swinir_tile.py # SwinIR 타일 기반 x4 추론 스크립트
 │
 ├─ detection/                  # 얼굴 인식 및 타겟 매칭 코드
 │  ├─ onetarget_multi.py       # 단일 타겟 (reference 여러 장 평균 embedding)
@@ -153,6 +155,22 @@ python inference_realesrgan.py ^
  -i <CodeFormer final_results> ^
  -o <최종 HR 결과> ^
  --outscale 1
+```
+
+### STEP 3.5 이미지 → 영상 변환 (HR 프레임 → MP4)
+> Real-ESRGAN으로 생성된 최종 HR 프레임들을  
+> 프레임 순서대로 결합하여 하나의 MP4 영상으로 재구성한다.  
+>  
+> 생성된 영상은 이후 얼굴 검출 및 타겟 추적 단계의 입력으로 사용된다.
+>
+> 📄 참고 문서: scripts/04_5_img_to_video.md  
+> 🧩 실행 스크립트: external/imgtovidep.py
+
+```bat
+python external/imgtovideo.py ^
+ --image_folder <최종 HR 프레임 폴더> ^
+ --output_video <HR 출력 영상 경로> ^
+ --fps 30
 ```
 
 ### STEP 4. 타겟 얼굴 탐지 및 식별 (InsightFace)
