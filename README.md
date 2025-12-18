@@ -51,7 +51,7 @@ Looky/
 │  └─ 05_detection_tracking.md # 얼굴 검출 및 타겟 추적 단계
 │
 ├─ external/                   # 외부 모델 공식 실행 스크립트
-│  ├─ imgtovidep.py 
+│  ├─ imgtovideo.py 
 │  ├─ inference_codeformer.py  # CodeFormer 얼굴 복원 추론 스크립트
 │  ├─ inference_realesrgan.py  # Real-ESRGAN 최종 업스케일링 스크립트
 │  └─ main_test_swinir_tile.py # SwinIR 타일 기반 x4 추론 스크립트
@@ -164,7 +164,7 @@ python inference_realesrgan.py ^
 > 생성된 영상은 이후 얼굴 검출 및 타겟 추적 단계의 입력으로 사용된다.
 >
 > 📄 참고 문서: scripts/04_5_img_to_video.md  
-> 🧩 실행 스크립트: external/imgtovidep.py
+> 🧩 실행 스크립트: external/imgtovideo.py
 
 ```bat
 python external/imgtovideo.py ^
