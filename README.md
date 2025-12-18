@@ -25,15 +25,26 @@
 ## 2. 전체 파이프라인 구조
 
 ```text
-원본 저해상도 영상
-   ↓ (프레임 분할)
-SwinIR x4 (1차 HR)
-   ↓
-CodeFormer (얼굴 crop + 얼굴 복원 + 병합)
-   ↓
-Real-ESRGAN (전체 프레임 최종 HR)
-   ↓
-InsightFace 기반 타겟 얼굴 매칭 + Bounding Box
+원본 저해상도 영상  
+↓ (프레임 분할)  
+
+SwinIR x4 (1차 HR)  
+↓  
+
+CodeFormer  
+(얼굴 crop → 얼굴 복원 → 원본 프레임 병합)  
+↓  
+
+Real-ESRGAN  
+(전체 프레임 최종 HR 이미지 생성)  
+↓  
+
+이미지 → 영상 재구성  
+(HR 프레임을 MP4 영상으로 변환)  
+↓  
+
+InsightFace 기반 타겟 얼굴 매칭  
++ Bounding Box 추적
 ```
 ---
 
